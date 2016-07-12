@@ -9,6 +9,3 @@ With the deployment of [pacman hooks](https://wiki.archlinux.org/index.php/User:
 ## Installation
 ### AUR Package for Arch Linux (including Arch ARM)
 AUR Package: https://aur.archlinux.org/packages/mandb-ondemand
-
-### Manual install
-Read the included INSTALL document manually install.
