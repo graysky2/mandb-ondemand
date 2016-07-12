@@ -8,4 +8,4 @@ Target = usr/share/man/*
 [Action]
 Description = Flagging mandb-ondemand for an update...
 When = PostTransaction
-Exec = /bin/sh -c 'touch /var/cache/man/.runflag'
+Exec = /usr/bin/install -m 644 /dev/null /var/cache/man/.runflag
