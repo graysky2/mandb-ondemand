@@ -2,4 +2,4 @@
 # mandb-ondemand @VERSION@
 
 [[ -d /var/cache/man ]] || mkdir -m 0755 -p /var/cache/man
-[[ -f /var/cache/man/.runflag ]] && mandb --quiet
+[[ -f /var/cache/man/.runflag ]] && mandb --quiet ; rm -f /var/cache/man/.runflag
