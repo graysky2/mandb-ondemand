@@ -1,0 +1,10 @@
+[Trigger]
+Type = File
+Operation = Install
+Operation = Upgrade
+Target = usr/share/man/*
+
+[Action]
+Description = Flagging mandb-ondemand for an update...
+When = PostTransaction
+Exec = /bin/sh -c 'touch /var/cache/man/.runflag'

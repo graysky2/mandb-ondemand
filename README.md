@@ -1,14 +1,14 @@
-# man-db-systemd
-The former Arch Linux systemd files to handle man-db cache updates
+# mandb-ondemand
+A pacman hook and systemd timer to handle periodic rebuilds of mandb cache.
 
 ## Purpose
-With the deployment of [pacman hooks](https://wiki.archlinux.org/index.php/User:Allan/Pacman_Hooks), the task of updating man-db's cache has been integrated into pacman operations.  Anytime any package writes a file to `/usr/share/man/*` the rebuild hook is trigger.  A side effect of this which is particularly true for low powered devices such as Arch ARM PCs is slow updates which can be annoying.
+Prolonged run times when triggering either the man-db.hook or man-db-purge.hook are the primary reason users might like this software.
 
-This repo holds the official Arch Linux Systemd service and timer to automate this process.
+With the deployment of [pacman hooks](https://wiki.archlinux.org/index.php/User:Allan/Pacman_Hooks), the task of updating and purging mandb's cache has been integrated into pacman operations.  Anytime any package writes a file to `/usr/share/man/*` on an install or remove operation, either of the aforementioned hooks will be triggered.  These events can happen each time the user triggers an update (thus multiple times per day depending on the user's level of OCD.)  As mentioned above, the process of rebuilding the cache can be slow.  Really slow particularly on low powered devices such as Arch ARM PCs which can be annoying as the pacman database remains locked while the rebuild is underway.
 
 ## Installation
 ### AUR Package for Arch Linux (including Arch ARM)
-AUR Package: https://aur.archlinux.org/packages/man-db-systemd
+AUR Package: https://aur.archlinux.org/packages/mandb-ondemand
 
 ### Manual install
-The PKGBUILD in the AUR package linked above simply provides the two files in this repo and creates a symlink to the mute pacman hook.
+Read the included INSTALL document manually install.
