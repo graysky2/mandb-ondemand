@@ -1,4 +1,4 @@
-VERSION = 2.00
+VERSION = 2.01
 PN = mandb-ondemand
 
 PREFIX ?= /usr
