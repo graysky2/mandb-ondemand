@@ -2,10 +2,9 @@
 Type = File
 Operation = Install
 Operation = Upgrade
-Operation = Remove
 Target = usr/share/man/*
 
 [Action]
-Description = Flagging mandb-ondemand for an update...
+Description = Asking for an update to mandb's database...
 When = PostTransaction
-Exec = /usr/bin/install -m 644 /dev/null /var/cache/man/.runflag
+Exec = /usr/bin/install -Dm 644 /dev/null /run/systemd/mandb/.flag

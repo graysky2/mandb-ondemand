@@ -4,7 +4,7 @@ RequiresMountsFor=/var/cache/man
 
 [Service]
 Type=oneshot
-ExecStart=/usr/bin/mandb --quiet --no-purge
+ExecStart=/usr/bin/mandb --quiet
 Nice=19
 IOSchedulingClass=best-effort
 IOSchedulingPriority=7

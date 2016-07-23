@@ -1,0 +1,7 @@
+[Unit]
+Description=Purge and update man-db cache
+RequiresMountsFor=/var/cache/man
+
+[Path]
+PathModified=/run/systemd/mandb-purge
+MakeDirectory=yes
