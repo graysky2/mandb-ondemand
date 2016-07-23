@@ -1,9 +1,0 @@
-[Trigger]
-Type = File
-Operation = Remove
-Target = usr/share/man/*
-
-[Action]
-Description = Asking for a purge and update to mandb's database...
-When = PostTransaction
-Exec = /usr/bin/install -Dm 644 /dev/null /run/systemd/mandb-purge/.flag
