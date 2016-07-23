@@ -6,6 +6,23 @@ With the deployment of [pacman hooks](https://wiki.archlinux.org/index.php/User:
 
 This software simply flags the index database for a rebuild or a rebuild/purge via a pacman hook that triggers a systemd unit to the dirty work leaving your shell window free of the dreaded pause.
 
+### Without mandb-ondemand
+```
+...
+:: Running post-transaction hooks...
+(1/1) Updating manpage index...
+ <<<WAIT>>>    <<<WAIT>>>    <<<WAIT>>>
+...
+$
+```
+### With mandb-ondemand
+```
+...
+:: Running post-transaction hooks...
+(1/1) Asking for an update to mandb's databse...
+$
+```
+
 ## Installation
 ### AUR Package for Arch Linux (including Arch ARM)
 AUR Package: https://aur.archlinux.org/packages/mandb-ondemand
