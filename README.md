@@ -19,10 +19,12 @@ $
 ```
 ...
 :: Running post-transaction hooks...
-(1/1) Asking for an update to mandb's databse...
+(1/1) Asking for an update to mandb's database...
 $
 ```
 
 ## Installation
 ### AUR Package for Arch Linux (including Arch ARM)
 AUR Package: https://aur.archlinux.org/packages/mandb-ondemand
+
+* No user action is required if using the AUR package (post_install script assures that the units are active).
