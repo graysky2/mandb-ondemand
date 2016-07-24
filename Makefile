@@ -1,4 +1,4 @@
-VERSION = 2.03
+VERSION = 2.04
 PN = mandb-ondemand
 
 PREFIX ?= /usr
@@ -24,7 +24,7 @@ install-hook:
 	$(LINK) /dev/null "$(DESTDIR)$(PACMANHOOKDIR)/man-db.hook"
 
 install-systemd:
-	$(Q)echo -e '\033[1;32mInstalling systemd files...\033[0m'
+	$(Q)echo -e '\033[1;32mInstalling systemd units...\033[0m'
 
 	$(INSTALL_DIR) "$(DESTDIR)$(LIVEDIR_SYSTEMD)"
 	$(INSTALL_DATA) init/$(PN).service "$(DESTDIR)$(INITDIR_SYSTEMD)/$(PN).service"
