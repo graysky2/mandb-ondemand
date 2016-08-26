@@ -3,7 +3,7 @@ Description=Update man-db cache
 RequiresMountsFor=/var/cache/man
 
 [Service]
-Type=oneshot
+Type=simple
 ExecStart=/usr/bin/mandb --quiet --no-purge
 Nice=19
 IOSchedulingClass=best-effort

@@ -6,6 +6,6 @@ Operation = Remove
 Target = usr/share/man/*
 
 [Action]
-Description = Asking for an update to manpage index cache...
+Description = Updating manpage index cache in the background...
 When = PostTransaction
-Exec = /usr/bin/install -Dm 644 /dev/null /run/systemd/mandb/.flag
+Exec = /usr/bin/systemctl --no-block start mandb-ondemand.service

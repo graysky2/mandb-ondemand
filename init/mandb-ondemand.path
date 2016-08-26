@@ -1,7 +1,0 @@
-[Unit]
-Description=Update man-db cache
-RequiresMountsFor=/var/cache/man
-
-[Path]
-PathModified=/run/systemd/mandb
-MakeDirectory=yes
